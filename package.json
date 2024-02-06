@@ -1,0 +1,48 @@
+{
+  "name": "flux-ui",
+  "version": "1.0.0-beta",
+  "description": "KiriminAja Flux UI Kit for Nuxt JS",
+  "repository": "kiriminaja/flux-ui",
+  "license": "MIT",
+  "keywords": [
+    "Nuxt3",
+    "UI"
+  ],
+  "contributors": [
+    {
+      "name": "KiriminAja Design Team"
+    }
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.mjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build build && esbuild --minify dist/script.mjs --outfile=dist/script.min.js",
+    "build": "pnpm run prepack",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground",
+    "lint": "eslint --ext .js,.vue,.ts .",
+    "prepublishOnly": "pnpm run prepack",
+    "release": "pnpm test && standard-version && git push --follow-tags && npm publish",
+    "test": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.8.2",
+    "lodash.template": "^4.5.0",
+    "pathe": "^1.1.1"
+  },
+  "devDependencies": {
+    "nuxt": "^3.8.2"
+  }
+}
