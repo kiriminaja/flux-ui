@@ -1,0 +1,111 @@
+:root {
+    --flux-primary: #7D3EB9;
+    --flux-onPrimary: #FFFFFF;
+    --flux-primaryContainer: #F0DBFF;
+    --flux-onPrimaryContainer: #2C0051;
+    --flux-secondary: #665A6F;
+    --flux-onSecondary: #FFFFFF;
+    --flux-secondaryContainer: #EDDDF6;
+    --flux-onSecondaryContainer: #211829;
+    --flux-tertiary: #805157;
+    --flux-onTertiary: #FFFFFF;
+    --flux-tertiaryContainer: #FFD9DC;
+    --flux-onTertiaryContainer: #321016;
+    --flux-error: #BA1A1A;
+    --flux-onError: #FFFFFF;
+    --flux-errorContainer: #FFDAD6;
+    --flux-onErrorContainer: #410002;
+    --flux-info: #2B5EA7;
+    --flux-onInfo: #FFFFFF;
+    --flux-infoContainer: #D7E3FF;
+    --flux-onInfoContainer: #001B3E;
+    --flux-success: #006D38;
+    --flux-onSuccess: #FFFFFF;
+    --flux-successContainer: #74FDA2;
+    --flux-onSuccessContainer: #00210D;
+    --flux-warning: #9D4300;
+    --flux-onWarning: #FFFFFF;
+    --flux-warningContainer: #FFDBCA;
+    --flux-onWarningContainer: #341100;
+    --flux-background: #FFFFFF;
+    --flux-onBackground: #1D1B1E;
+    --flux-outline: #7C757E;
+    --flux-outlineVariant: #CCC4CE;
+    --flux-surface: #FEF7FC;
+    --flux-onSurface: #1D1B1E;
+    --flux-surfaceVariant: #E9DFEB;
+    --flux-onSurfaceVariant: #4A454E;
+    --flux-inverseSurface: #322F33;
+    --flux-onInverseSurface: #F6EFF4;
+    --flux-surfaceBright: #FEF7FC;
+    --flux-surfaceDim: #DED8DD;
+    --flux-surfaceContainerLowest: #FFFFFF;
+    --flux-surfaceContainerLow: #F8F2F6;
+    --flux-surfaceContainer: #F3ECF1;
+    --flux-surfaceContainerHigh: #EDE6EB;
+    --flux-surfaceContainerHighest: #E7E1E5;
+}
+
+.dark {
+    --flux-primary: #DDB7FF;
+    --flux-onPrimary: #490080;
+    --flux-primaryContainer: #63209F;
+    --flux-onPrimaryContainer: #F0DBFF;
+    --flux-secondary: #D0C1D9;
+    --flux-onSecondary: #362C3F;
+    --flux-secondaryContainer: #4D4356;
+    --flux-onSecondaryContainer: #EDDDF6;
+    --flux-tertiary: #F3B7BD;
+    --flux-onTertiary: #4B252A;
+    --flux-tertiaryContainer: #653A40;
+    --flux-onTertiaryContainer: #FFD9DC;
+    --flux-error: #FFB4AB;
+    --flux-onError: #690005;
+    --flux-errorContainer: #93000A;
+    --flux-onErrorContainer: #FFDAD6;
+    --flux-background: #0F0D11;
+    --flux-onBackground: #E7E1E5;
+    --flux-info: #AAC7FF;
+    --flux-onInfo: #002F65;
+    --flux-infoContainer: #01458E;
+    --flux-onInfoContainer: #D7E3FF;
+    --flux-success: #55DF88;
+    --flux-onSuccess: #00391A;
+    --flux-successContainer: #005229;
+    --flux-onSuccessContainer: #95F8A7;
+    --flux-warning: #FFB690;
+    --flux-onWarning: #552100;
+    --flux-warningContainer: #783200;
+    --flux-onWarningContainer: #FFDBCA;
+    --flux-outline: #968E98;
+    --flux-outlineVariant: #4A454E;
+    --flux-surface: #151316;
+    --flux-onSurface: #CBC5C9;
+    --flux-surfaceVariant: #4A454E;
+    --flux-onSurfaceVariant: #CCC4CE;
+    --flux-inverseSurface: #E7E1E5;
+    --flux-onInverseSurface: #1D1B1E;
+    --flux-surfaceBright: #3B383C;
+    --flux-surfaceDim: #151316;
+    --flux-surfaceContainerLowest: #0F0D11;
+    --flux-surfaceContainerLow: #1D1B1E;
+    --flux-surfaceContainer: #211F22;
+    --flux-surfaceContainerHigh: #2C292D;
+    --flux-surfaceContainerHighest: #373437;
+}
+
+html {
+    background: var(--flux-background);
+    color: var(--flux-onBackground);
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 0, 'opsz' 48;
+    vertical-align: middle;
+}
+.material-symbols-outlined.filled {
+    font-variation-settings: 'FILL' 1, 'wght' 700, 'GRAD' 0, 'opsz' 48;
+}
+.material-symbols-outlined.sm {
+    font-size: 16px;
+}
