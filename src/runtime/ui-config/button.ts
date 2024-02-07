@@ -1,6 +1,6 @@
 import type {IButtonColors} from "../utils/general";
 
-export const buttonSpaceX = 'px-5'
+export const buttonSpaceX = 'px-4'
 export const buttonSpaceY = 'py-3'
 export const buttonSpaceAll = buttonSpaceX + ' ' + buttonSpaceY
 export const buttonFilled = {
