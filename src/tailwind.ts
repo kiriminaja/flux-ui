@@ -2,7 +2,6 @@ import {join} from 'pathe'
 import {addTemplate, installModule, useNuxt} from "@nuxt/kit";
 import type {ModuleOptions} from './module';
 import {upperFirst} from "scule";
-import defaultTheme from "tailwindcss/defaultTheme";
 
 export default async function installTailwind(moduleOptions: ModuleOptions, nuxt = useNuxt(), {resolve, runtimeDir}) {
     // @ts-ignore
@@ -12,9 +11,9 @@ export default async function installTailwind(moduleOptions: ModuleOptions, nuxt
         tailwindConfig.theme.colors = tailwindConfig.theme.colors || {}
 
         tailwindConfig.theme.fontFamily = {
-            'sans': ['Inter', '-apple-system', ...defaultTheme.fontFamily.sans],
-            'display': ['Lora', '-apple-system', ...defaultTheme.fontFamily.sans],
-            'mono': ['Inconsolata', ...defaultTheme.fontFamily.mono],
+            'sans': ['Inter', '-apple-system', 'Sans Serif'],
+            'display': ['Lora', '-apple-system', 'Sans Serif'],
+            'mono': ['Inconsolata', 'Monospace'],
         }
 
         tailwindConfig.theme.colors.flux = {

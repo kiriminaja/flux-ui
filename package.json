@@ -1,8 +1,8 @@
 {
-  "name": "my-module",
+  "name": "@kiriminaja/flux-ui",
   "version": "1.0.0",
-  "description": "My new Nuxt module",
-  "repository": "your-org/my-module",
+  "description": "KiriminAja Flux UI for Nuxt",
+  "repository": "kiriminaja/flux-ui",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.10.1",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/tailwindcss": "^6.11.3",
     "@tailwindcss/container-queries": "^0.1.1",
     "@tailwindcss/forms": "^0.5.7",
