@@ -1,7 +1,7 @@
 import { join } from 'pathe'
 import { addTemplate, installModule, useNuxt } from '@nuxt/kit'
-import type { ModuleOptions } from './module'
 import { upperFirst } from 'scule'
+import type { ModuleOptions } from './module'
 
 export default async function installTailwind (options: ModuleOptions, nuxt = useNuxt(), { resolve, runtimeDir }) {
   // @ts-ignore
