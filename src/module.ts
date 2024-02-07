@@ -1,4 +1,4 @@
-import {defineNuxtModule, addPlugin, createResolver, addComponent} from '@nuxt/kit'
+import {defineNuxtModule, addPlugin, createResolver, addComponent, addComponentsDir, addImportsDir} from '@nuxt/kit'
 import {type Link} from "@unhead/vue";
 import installTailwind from "./tailwind";
 
@@ -44,11 +44,16 @@ export default defineNuxtModule<ModuleOptions>({
             nuxt.options.app.head.link = googleFont as []
         }
 
+        // Import all composable methods
+        addImportsDir(resolve('runtime/composables'))
+
+        // Install tailwind and merge tailwind config
         await installTailwind(options, nuxt, {resolve, runtimeDir})
 
-        await addComponent({
-            name: 'FluxButton',
-            filePath: resolve('runtime/components/Button.vue')
+        // Import all component inside folder, kindly to rebuild before using new component
+        await addComponentsDir({
+            prefix: 'Flux',
+            path: resolve('runtime/components')
         })
     }
 })

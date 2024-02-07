@@ -2,6 +2,7 @@ import {join} from 'pathe'
 import {addTemplate, installModule, useNuxt} from "@nuxt/kit";
 import type {ModuleOptions} from './module';
 import {upperFirst} from "scule";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export default async function installTailwind(moduleOptions: ModuleOptions, nuxt = useNuxt(), {resolve, runtimeDir}) {
     // @ts-ignore
@@ -9,6 +10,12 @@ export default async function installTailwind(moduleOptions: ModuleOptions, nuxt
         tailwindConfig.theme = tailwindConfig.theme || {}
         tailwindConfig.theme.extend = tailwindConfig.theme.extend || {}
         tailwindConfig.theme.colors = tailwindConfig.theme.colors || {}
+
+        tailwindConfig.theme.fontFamily = {
+            'sans': ['Inter', '-apple-system', ...defaultTheme.fontFamily.sans],
+            'display': ['Lora', '-apple-system', ...defaultTheme.fontFamily.sans],
+            'mono': ['Inconsolata', ...defaultTheme.fontFamily.mono],
+        }
 
         tailwindConfig.theme.colors.flux = {
             transparent: 'transparent',
@@ -74,6 +81,7 @@ export default async function installTailwind(moduleOptions: ModuleOptions, nuxt
         content: {
           files: [
             ${JSON.stringify(resolve(runtimeDir, 'components/**/*.{vue,mjs,ts}'))},
+            ${JSON.stringify(resolve(runtimeDir, 'ui-config/*.{vue,mjs,ts}'))},
           ],
           transform: {
             vue: (content) => {

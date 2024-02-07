@@ -1,6 +1,7 @@
 <template>
   <div>
-    <FluxButton label="Buat Paket Baru"></FluxButton>
+    <FluxButton hierarchy="text" color="info" label="Buat Paket Baru"></FluxButton>
+    <FluxChips>COBAA</FluxChips>
   </div>
 </template>
 
